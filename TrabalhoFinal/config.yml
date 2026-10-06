@@ -1,0 +1,33 @@
+arrivals:
+  Fila1:
+    min: 2.0
+    max: 4.0
+
+queues:
+  Fila1:
+    servers: 1
+    capacity: INF
+    minService: 1.0
+    maxService: 2.0
+    target:
+      Fila2: 0.2
+      Fila3: 0.8
+  
+  Fila2:
+    servers: 2
+    capacity: 5
+    minService: 4.0
+    maxService: 6.0
+    target:
+      Fila1: 0.3
+      Fila3: 0.5
+      Out: 0.2
+
+  Fila3:
+    servers: 2
+    capacity: 10
+    minService: 5.0
+    maxService: 15.0
+    target:
+      Fila2: 0.7
+      Out: 0.3

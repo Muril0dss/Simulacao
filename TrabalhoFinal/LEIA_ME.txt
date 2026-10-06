@@ -1,0 +1,17 @@
+INSTRUCOES DE USO - SIMULADOR DE REDES DE FILAS
+Trabalho  - Simulacao e Metodos Analiticos
+
+O simulador foi reescrito em Python, mantendo 100% da precisão matemática e os mesmos algoritmos de geração.
+
+1. PRÉ-REQUISITOS
+- Python 3 instalado no ambiente (nenhuma biblioteca externa como PyYAML é necessária, pois criamos um leitor customizado nativo super leve).
+
+2. ARQUIVOS
+- `config.yml`: Arquivo onde você descreve as Filas, suas capacidades, quantidades de servidores, tempo de atendimento, tempo de chegada e as rotas probabilísticas de direcionamento.
+- `simulator.py`: Código fonte do simulador.
+
+3. COMO EXECUTAR
+Abra o terminal na mesma pasta onde se encontram os arquivos e execute:
+$ python3 simulator.py config.yml
+
+A simulação vai parar exatamente no sorteio de número 100.000 (consumo de limite de pseudoaleatórios), e imprimirá na tela os relatórios individuais de todas as filas, bem como o tempo médio da simulação.
